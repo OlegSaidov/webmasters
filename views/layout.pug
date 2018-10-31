@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta('viewport', content="width=device-width, initial-scale=1")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src='/javascripts/bootstrap.js')
+  body
+    nav.navbar.navbar-inverse.fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button',data-toggle='collapse', data-target="#navbar")
+            span.sr-only Toggle Navigation
+            span.icon-navbar
+            span.icon-navbar
+            span.icon-navbar
+            span.icon-navbar
+          a.navbar-brand(href='/') Web Masters 
+        #navbar.collapse.navbar-collapse.navbar-right
+          ul.nav.navbar-nav
+            li
+              a(href='/') Home
+            li
+              a(href='/services') Services  
+            li
+              a(href='/About') About 
+            li
+              a(href='/contact') Contact
+      .container           
+    block content
+    footer.py-5
+      .container
+        p.m-0.text-center (c) Web Maters 2018 

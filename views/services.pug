@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1.text-center #{title}
+
+  each s, i in serv
+    .well
+      .row
+        .col-lg-9
+          h3 #{s.name}
+          p #{s.description}
+        .col-lg-3
