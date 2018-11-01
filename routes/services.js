@@ -15,7 +15,7 @@ fs.readFile("json/services.json","utf8", function(err, data){
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.render('services', {
-    title:'Services'
+    title:'Services',
     serv: filedata});
 });
 
