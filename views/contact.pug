@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  .container
+    h1.text-center #{title}
+    .row
+        .col-lg-2.col-md-2
+        .col-lg-8.col-md-8
+            .form-area
+            form(role='form', action='', method='GET')
+                .form-group
+                input.form-control(type='text', name='name', placeholder='Name', required='')
+                .form-group
+                input.form-control(type='email', name='email', placeholder='Email', required='')
+                .form-group
+                input.form-control(type='number', name='mobile', placeholder='Mobile Number', required='')
+                .form-group
+                select(name='carrier')
+                    option(value='att') AT&T
+                    option(value='tmobile') T-mobile
+                    option(value='mento') Metro PCS
+                    option(value='verizon') Verizon
+                    option(value='sprint') Sprint
+                .form-group
+                input#subject.form-control(type='text', name='subject', placeholder='Subject', required='')
+                .form-group
+                textarea.form-control(name='message', placeholder='Message', maxlength='140', rows='7')
+                input(type='radio', name='contact', value='email')
+                |  Email 
+                input(type='radio', name='contact', value='phone')
+                |  SMS
+                input#submit.btn.btn-primary.pull-right(type='submit', name='submit', value='submit')
+
