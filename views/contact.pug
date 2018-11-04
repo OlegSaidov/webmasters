@@ -6,8 +6,8 @@ block content
     .row
         .col-lg-2.col-md-2
         .col-lg-8.col-md-8
-            .form-area
-            form(role='form', action='', method='GET')
+          .form-area
+            form(role='form', action='', method='POST')
                 .form-group
                 input.form-control(type='text', name='name', placeholder='Name', required='')
                 .form-group
@@ -25,8 +25,10 @@ block content
                 input#subject.form-control(type='text', name='subject', placeholder='Subject', required='')
                 .form-group
                 textarea.form-control(name='message', placeholder='Message', maxlength='140', rows='7')
+                span Get a copy of this form either as an 
                 input(type='radio', name='contact', value='email')
                 |  Email 
+                span or  
                 input(type='radio', name='contact', value='phone')
                 |  SMS
                 input#submit.btn.btn-primary.pull-right(type='submit', name='submit', value='submit')
